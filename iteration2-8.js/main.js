@@ -1,14 +1,16 @@
 
 //2.7
-const childNode = document.querySelector('.remove')
 const fatherNode = document.querySelector('.parent')
-fatherNode.removeChild(childNode)
 
-//NO FUNCIONA, SOLO ELIMINA 1
+while (fatherNode.firstChild) {
+    fatherNode.removeChild(fatherNode.firstChild)
+}
 
 //2.8
 
-let newPar = document.createElement('p').appendChild(document.createTextNode('voy en medio'))
+let newPar = document.createElement('p')
+let newmyContent = (document.createTextNode('voy en medio'))
+newPar.appendChild(newmyContent)
 let mySecondDiv = document.getElementById('secondDiv').getElementsByTagName('div')[0]
 document.getElementById('secondDiv').insertBefore(newPar, mySecondDiv)
 
