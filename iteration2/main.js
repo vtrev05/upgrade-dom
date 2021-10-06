@@ -5,12 +5,11 @@
 //2.1
 
 const insert = document.querySelector('.fn-insert-there')
-insert.innerHTML = "<div>Tema 1</div>"
+insert.innerHTML = "<div></div>"
 
 //2.2
 
-const insertTwo = document.querySelector('.here')
-insertTwo.innerHTML = "<div><p>Hola</p></div>"
+document.body.innerHTML += ` <div class="hereIAm"><p>Hola</p></div>`
 
 //2.3
 
@@ -27,7 +26,7 @@ for (let i = 0; i < 6; i++) {
 //2.4
 
 const moreCreation = document.querySelector('.moreContent')
-insertTwo.innerHTML = "<div><p>Soy dinámico</p></div>"
+moreCreation.innerHTML = "<div><p>Soy dinámico</p></div>"
 
 //2.5
 
@@ -41,19 +40,15 @@ const ul = document.querySelector('.ul')
 
 function bucle() {
     for (let i = 0; i < apps.length; i++) {
-        let newItem = document.createElement('li');
-        let newContent = document.createTextNode(`${apps[i]}`);
-        newItem.appendChild(newContent);
-        ul.appendChild(newItem)
+        let newItem2 = document.createElement('li');
+        let newContent2 = document.createTextNode(`${apps[i]}`);
+        newItem2.appendChild(newContent2);
+        ul.appendChild(newItem2)
         
     }
 }
 bucle()
 
-//2.7
-const remove = document.querySelector('.remove')
-remove.parentNode.removeChild(remove)
 
-//2.8
 
-//2.9
+
